@@ -1,5 +1,6 @@
 
-import { Video, MessageSquare, FileText, Shield, Clock } from 'lucide-react';
+import { Video, MessageSquare, FileText, Shield, Clock, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import MainLayout from '@/layouts/MainLayout';
 import ConsultationCard from '@/components/ConsultationCard';
 
@@ -195,9 +196,9 @@ const Consultation = () => {
               Book your virtual consultation today and experience healthcare on your terms.
             </p>
             
-            <a href="/appointments" className="btn-primary bg-white text-medical-700 hover:bg-gray-100">
+            <Link to="/appointments" className="btn-primary bg-white text-medical-700 hover:bg-gray-100">
               Book a Virtual Consultation
-            </a>
+            </Link>
           </div>
         </div>
       </section>

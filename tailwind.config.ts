@@ -132,7 +132,7 @@ export default {
 				"rotate-slow": "rotate-slow 20s linear infinite"
 			},
 			fontFamily: {
-				sans: ['SF Pro Display', 'Inter', 'sans-serif']
+				sans: ['Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
 			}
 		}
 	},
