@@ -76,7 +76,7 @@ const Consultation = () => {
               </p>
             </div>
             
-            <div className="glass-card p-6 text-center">
+            <Link to="/digital-records" className="glass-card p-6 text-center cursor-pointer hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
               <div className="inline-flex items-center justify-center p-3 bg-medical-100 rounded-full text-medical-700 mb-4">
                 <FileText className="h-6 w-6" />
               </div>
@@ -84,7 +84,7 @@ const Consultation = () => {
               <p className="text-gray-600">
                 Access consultation summaries, prescriptions, and follow-up care instructions online anytime.
               </p>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
