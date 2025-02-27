@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <Link to="/" className="text-2xl font-bold text-medical-800 flex items-center mb-6">
+            <Link to="/" className="text-2xl font-bold text-medical-800 flex items-center mb-6 hover:text-medical-600 transition-colors duration-300">
               <span className="text-medical-500">Medi</span>
               <span>Sphere</span>
             </Link>
@@ -31,28 +31,28 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-medical-500 hover:bg-medical-500 hover:text-white transition-colors duration-300"
+                className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-medical-500 hover:bg-medical-500 hover:text-white transition-colors duration-300 hover:border-medical-500 transform hover:-translate-y-1"
                 aria-label="Facebook"
               >
                 <Facebook size={18} />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-medical-500 hover:bg-medical-500 hover:text-white transition-colors duration-300"
+                className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-medical-500 hover:bg-medical-500 hover:text-white transition-colors duration-300 hover:border-medical-500 transform hover:-translate-y-1"
                 aria-label="Twitter"
               >
                 <Twitter size={18} />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-medical-500 hover:bg-medical-500 hover:text-white transition-colors duration-300"
+                className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-medical-500 hover:bg-medical-500 hover:text-white transition-colors duration-300 hover:border-medical-500 transform hover:-translate-y-1"
                 aria-label="Instagram"
               >
                 <Instagram size={18} />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-medical-500 hover:bg-medical-500 hover:text-white transition-colors duration-300"
+                className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-medical-500 hover:bg-medical-500 hover:text-white transition-colors duration-300 hover:border-medical-500 transform hover:-translate-y-1"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
@@ -116,21 +116,21 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-gray-800 mb-6">Our Services</h3>
             <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <Heart size={18} className="text-medical-500 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-600">AI-Powered Diagnostics</span>
+              <li className="flex items-start gap-3 group">
+                <Heart size={18} className="text-medical-500 mt-0.5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
+                <span className="text-gray-600 group-hover:text-medical-600 transition-colors duration-300">AI-Powered Diagnostics</span>
               </li>
-              <li className="flex items-start gap-3">
-                <Shield size={18} className="text-medical-500 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-600">Blockchain Medical Records</span>
+              <li className="flex items-start gap-3 group">
+                <Shield size={18} className="text-medical-500 mt-0.5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
+                <span className="text-gray-600 group-hover:text-medical-600 transition-colors duration-300">Blockchain Medical Records</span>
               </li>
-              <li className="flex items-start gap-3">
-                <Clock size={18} className="text-medical-500 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-600">24/7 Emergency Services</span>
+              <li className="flex items-start gap-3 group">
+                <Clock size={18} className="text-medical-500 mt-0.5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
+                <span className="text-gray-600 group-hover:text-medical-600 transition-colors duration-300">24/7 Emergency Services</span>
               </li>
-              <li className="flex items-start gap-3">
-                <MapPin size={18} className="text-medical-500 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-600">Real-time Facility Mapping</span>
+              <li className="flex items-start gap-3 group">
+                <MapPin size={18} className="text-medical-500 mt-0.5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
+                <span className="text-gray-600 group-hover:text-medical-600 transition-colors duration-300">Real-time Facility Mapping</span>
               </li>
             </ul>
           </div>
@@ -139,20 +139,20 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-gray-800 mb-6">Contact Us</h3>
             <ul className="space-y-4">
-              <li className="flex items-start">
+              <li className="flex items-start group">
                 <MapPin 
                   size={18} 
-                  className="text-medical-500 mr-3 mt-1 flex-shrink-0" 
+                  className="text-medical-500 mr-3 mt-1 flex-shrink-0 group-hover:text-medical-600 transition-colors duration-300" 
                 />
-                <span className="text-gray-600">
+                <span className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
                   123 Innovation Drive, Medical District<br />
                   San Francisco, CA 94107
                 </span>
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center group">
                 <Phone 
                   size={18} 
-                  className="text-medical-500 mr-3 flex-shrink-0" 
+                  className="text-medical-500 mr-3 flex-shrink-0 group-hover:text-medical-600 transition-colors duration-300" 
                 />
                 <a 
                   href="tel:+18001234567" 
@@ -161,10 +161,10 @@ const Footer = () => {
                   1-800-MEDISPHERE
                 </a>
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center group">
                 <Mail 
                   size={18} 
-                  className="text-medical-500 mr-3 flex-shrink-0" 
+                  className="text-medical-500 mr-3 flex-shrink-0 group-hover:text-medical-600 transition-colors duration-300" 
                 />
                 <a 
                   href="mailto:info@medisphere.com" 
@@ -186,19 +186,19 @@ const Footer = () => {
             <div className="flex space-x-6">
               <a 
                 href="#" 
-                className="text-gray-500 hover:text-medical-500 transition-colors duration-300 text-sm"
+                className="text-gray-500 hover:text-medical-500 transition-colors duration-300 text-sm hover-underline"
               >
                 Privacy Policy
               </a>
               <a 
                 href="#" 
-                className="text-gray-500 hover:text-medical-500 transition-colors duration-300 text-sm"
+                className="text-gray-500 hover:text-medical-500 transition-colors duration-300 text-sm hover-underline"
               >
                 Terms of Service
               </a>
               <a 
                 href="#" 
-                className="text-gray-500 hover:text-medical-500 transition-colors duration-300 text-sm"
+                className="text-gray-500 hover:text-medical-500 transition-colors duration-300 text-sm hover-underline"
               >
                 Cookie Policy
               </a>

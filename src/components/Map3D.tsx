@@ -111,14 +111,14 @@ const Map3D = () => {
                 <input
                   type="text"
                   placeholder="Search facilities..."
-                  className="pl-10 pr-4 py-2 border border-gray-200 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-medical-500/50 focus:border-medical-500"
+                  className="pl-10 pr-4 py-2 border border-gray-200 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-medical-500/50 focus:border-medical-500 transition-all duration-300"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
               </div>
               
               <div className="ml-2 flex">
-                <button className="p-2 bg-white border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50">
+                <button className="p-2 bg-white border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50 hover:text-medical-600 hover:border-medical-300 transition-all duration-300">
                   <Navigation size={20} />
                 </button>
               </div>
@@ -127,35 +127,35 @@ const Map3D = () => {
           
           <div className="flex flex-wrap gap-4 mt-4">
             <div className="flex items-center">
-              <div className="flex items-center justify-center h-6 w-6 rounded-full bg-white border border-gray-200 mr-2">
+              <div className="flex items-center justify-center h-6 w-6 rounded-full bg-white border border-gray-200 mr-2 transition-all duration-300 hover:border-medical-300 hover:bg-medical-50">
                 <Hospital size={14} className="text-medical-700" />
               </div>
               <span className="text-sm text-gray-700">Hospitals</span>
             </div>
             
             <div className="flex items-center">
-              <div className="flex items-center justify-center h-6 w-6 rounded-full bg-white border border-gray-200 mr-2">
+              <div className="flex items-center justify-center h-6 w-6 rounded-full bg-white border border-gray-200 mr-2 transition-all duration-300 hover:border-medical-300 hover:bg-medical-50">
                 <Ambulance size={14} className="text-medical-700" />
               </div>
               <span className="text-sm text-gray-700">Ambulances</span>
             </div>
             
             <div className="flex items-center">
-              <div className="flex items-center justify-center h-6 w-6 rounded-full bg-white border border-gray-200 mr-2">
+              <div className="flex items-center justify-center h-6 w-6 rounded-full bg-white border border-gray-200 mr-2 transition-all duration-300 hover:border-medical-300 hover:bg-medical-50">
                 <div className="h-2 w-2 rounded-full bg-green-500"></div>
               </div>
               <span className="text-sm text-gray-700">High Availability</span>
             </div>
             
             <div className="flex items-center">
-              <div className="flex items-center justify-center h-6 w-6 rounded-full bg-white border border-gray-200 mr-2">
+              <div className="flex items-center justify-center h-6 w-6 rounded-full bg-white border border-gray-200 mr-2 transition-all duration-300 hover:border-medical-300 hover:bg-medical-50">
                 <div className="h-2 w-2 rounded-full bg-yellow-500"></div>
               </div>
               <span className="text-sm text-gray-700">Medium Availability</span>
             </div>
             
             <div className="flex items-center">
-              <div className="flex items-center justify-center h-6 w-6 rounded-full bg-white border border-gray-200 mr-2">
+              <div className="flex items-center justify-center h-6 w-6 rounded-full bg-white border border-gray-200 mr-2 transition-all duration-300 hover:border-medical-300 hover:bg-medical-50">
                 <div className="h-2 w-2 rounded-full bg-red-500"></div>
               </div>
               <span className="text-sm text-gray-700">Low Availability</span>
@@ -200,8 +200,10 @@ const Map3D = () => {
                 >
                   <div className="relative">
                     <div 
-                      className={`h-10 w-10 rounded-full bg-white shadow-lg flex items-center justify-center border-2 ${
-                        selectedLocation === facility.name ? 'border-medical-500' : 'border-white'
+                      className={`h-10 w-10 rounded-full bg-white shadow-lg flex items-center justify-center border-2 transition-all duration-300 ${
+                        selectedLocation === facility.name 
+                          ? 'border-medical-500 shadow-medical-500/30' 
+                          : 'border-white hover:border-medical-300 hover:shadow-lg'
                       }`}
                     >
                       {facility.type === 'hospital' && (
@@ -217,7 +219,7 @@ const Map3D = () => {
                     </div>
                     
                     {selectedLocation === facility.name && (
-                      <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white rounded-lg shadow-xl p-3 z-20 animate-fade-in">
+                      <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white rounded-lg shadow-xl p-3 z-20 animate-fade-in hover:shadow-2xl transition-all duration-300">
                         <h3 className="font-semibold text-gray-800">{facility.name}</h3>
                         <p className="text-sm text-gray-600 mb-2">{facility.address}</p>
                         <div className="flex justify-between text-sm">
@@ -233,10 +235,10 @@ const Map3D = () => {
                           </span>
                         </div>
                         <div className="mt-3 flex space-x-2">
-                          <button className="flex-1 py-1.5 px-3 bg-medical-500 text-white text-sm rounded-lg">
+                          <button className="flex-1 py-1.5 px-3 bg-medical-500 text-white text-sm rounded-lg hover:bg-medical-600 transition-colors duration-300">
                             Details
                           </button>
-                          <button className="flex-1 py-1.5 px-3 bg-white border border-gray-200 text-sm rounded-lg">
+                          <button className="flex-1 py-1.5 px-3 bg-white border border-gray-200 text-sm rounded-lg hover:bg-gray-50 hover:border-medical-200 transition-colors duration-300">
                             Directions
                           </button>
                         </div>

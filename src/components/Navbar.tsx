@@ -30,7 +30,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link 
             to="/" 
-            className="text-2xl font-bold text-medical-800 flex items-center"
+            className="text-2xl font-bold text-medical-800 flex items-center hover:text-medical-600 transition-colors duration-300"
           >
             <span className="text-medical-500">Medi</span>
             <span>Sphere</span>
@@ -42,7 +42,7 @@ const Navbar = () => {
             <NavLink 
               to="/" 
               className={({ isActive }) => 
-                `nav-link ${isActive ? "nav-link-active" : ""}`
+                `nav-link ${isActive ? "nav-link-active" : ""} hover:scale-105 transition-transform duration-300`
               }
               end
             >
@@ -51,7 +51,7 @@ const Navbar = () => {
             <NavLink 
               to="/mission" 
               className={({ isActive }) => 
-                `nav-link ${isActive ? "nav-link-active" : ""}`
+                `nav-link ${isActive ? "nav-link-active" : ""} hover:scale-105 transition-transform duration-300`
               }
             >
               Our Mission
@@ -59,7 +59,7 @@ const Navbar = () => {
             <NavLink 
               to="/appointments" 
               className={({ isActive }) => 
-                `nav-link ${isActive ? "nav-link-active" : ""}`
+                `nav-link ${isActive ? "nav-link-active" : ""} hover:scale-105 transition-transform duration-300`
               }
             >
               Appointments
@@ -67,7 +67,7 @@ const Navbar = () => {
             <NavLink 
               to="/consultation" 
               className={({ isActive }) => 
-                `nav-link ${isActive ? "nav-link-active" : ""}`
+                `nav-link ${isActive ? "nav-link-active" : ""} hover:scale-105 transition-transform duration-300`
               }
             >
               Virtual Consult
@@ -75,7 +75,7 @@ const Navbar = () => {
             <NavLink 
               to="/map" 
               className={({ isActive }) => 
-                `nav-link ${isActive ? "nav-link-active" : ""}`
+                `nav-link ${isActive ? "nav-link-active" : ""} hover:scale-105 transition-transform duration-300`
               }
             >
               3D Map
@@ -84,15 +84,15 @@ const Navbar = () => {
           
           {/* Call to Action Button */}
           <div className="hidden md:flex items-center">
-            <a href="tel:+1800MEDISPHERE" className="btn-primary flex items-center gap-2">
-              <Phone size={16} />
+            <a href="tel:+1800MEDISPHERE" className="btn-primary flex items-center gap-2 group">
+              <Phone size={16} className="group-hover:animate-pulse" />
               <span>Emergency Call</span>
             </a>
           </div>
           
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden focus:outline-none"
+            className="md:hidden focus:outline-none hover:bg-gray-100 p-2 rounded-lg transition-colors duration-300"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -115,7 +115,7 @@ const Navbar = () => {
           <NavLink 
             to="/" 
             className={({ isActive }) => 
-              `text-xl font-medium ${isActive ? "text-medical-500" : "text-gray-800"}`
+              `text-xl font-medium transition-all duration-300 ${isActive ? "text-medical-500" : "text-gray-800"} hover:translate-x-2`
             }
             onClick={() => setMobileMenuOpen(false)}
             end
@@ -125,7 +125,7 @@ const Navbar = () => {
           <NavLink 
             to="/mission" 
             className={({ isActive }) => 
-              `text-xl font-medium ${isActive ? "text-medical-500" : "text-gray-800"}`
+              `text-xl font-medium transition-all duration-300 ${isActive ? "text-medical-500" : "text-gray-800"} hover:translate-x-2`
             }
             onClick={() => setMobileMenuOpen(false)}
           >
@@ -134,7 +134,7 @@ const Navbar = () => {
           <NavLink 
             to="/appointments" 
             className={({ isActive }) => 
-              `text-xl font-medium ${isActive ? "text-medical-500" : "text-gray-800"}`
+              `text-xl font-medium transition-all duration-300 ${isActive ? "text-medical-500" : "text-gray-800"} hover:translate-x-2`
             }
             onClick={() => setMobileMenuOpen(false)}
           >
@@ -143,7 +143,7 @@ const Navbar = () => {
           <NavLink 
             to="/consultation" 
             className={({ isActive }) => 
-              `text-xl font-medium ${isActive ? "text-medical-500" : "text-gray-800"}`
+              `text-xl font-medium transition-all duration-300 ${isActive ? "text-medical-500" : "text-gray-800"} hover:translate-x-2`
             }
             onClick={() => setMobileMenuOpen(false)}
           >
@@ -152,7 +152,7 @@ const Navbar = () => {
           <NavLink 
             to="/map" 
             className={({ isActive }) => 
-              `text-xl font-medium ${isActive ? "text-medical-500" : "text-gray-800"}`
+              `text-xl font-medium transition-all duration-300 ${isActive ? "text-medical-500" : "text-gray-800"} hover:translate-x-2`
             }
             onClick={() => setMobileMenuOpen(false)}
           >
@@ -162,10 +162,10 @@ const Navbar = () => {
           <div className="pt-6 border-t border-gray-100">
             <a 
               href="tel:+1800MEDISPHERE" 
-              className="btn-primary w-full justify-center"
+              className="btn-primary w-full justify-center group"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <Phone size={16} className="mr-2" />
+              <Phone size={16} className="mr-2 group-hover:animate-pulse" />
               <span>Emergency Call</span>
             </a>
           </div>

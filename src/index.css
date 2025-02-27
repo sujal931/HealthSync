@@ -98,11 +98,19 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-lg rounded-2xl;
+    @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-lg rounded-2xl transition-all duration-300;
+  }
+  
+  .glass-card:hover {
+    @apply shadow-xl border-medical-200/40 transform -translate-y-1;
   }
   
   .glass-card-dark {
-    @apply bg-gray-900/70 backdrop-blur-lg border border-gray-800/30 shadow-lg rounded-2xl;
+    @apply bg-gray-900/70 backdrop-blur-lg border border-gray-800/30 shadow-lg rounded-2xl transition-all duration-300;
+  }
+  
+  .glass-card-dark:hover {
+    @apply shadow-xl border-medical-700/40 transform -translate-y-1;
   }
   
   .btn-primary {
@@ -171,5 +179,43 @@
   }
   .stagger-animation > *:nth-child(6) {
     animation-delay: 0.6s;
+  }
+  
+  /* Hover effect utilities */
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-medical-400/20;
+  }
+  
+  .hover-elevate {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .hover-bright {
+    @apply transition-all duration-300 hover:brightness-110;
+  }
+  
+  .pulse-on-hover:hover {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+  
+  .grow-on-hover {
+    @apply transition-transform duration-300 hover:scale-[1.03];
+  }
+  
+  .hover-underline {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-medical-500 after:scale-x-0 after:origin-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-left;
   }
 }
