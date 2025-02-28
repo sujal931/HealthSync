@@ -22,8 +22,8 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <Link to="/" className="text-2xl font-bold text-medical-800 flex items-center mb-6 hover:text-medical-600 transition-colors duration-300">
-              <span className="text-medical-500">Medi</span>
-              <span>Sphere</span>
+              <span className="text-medical-500">Health</span>
+              <span>Sync</span>
             </Link>
             <p className="text-gray-600 mb-6">
               Revolutionizing healthcare with cutting-edge technology, ensuring better care for all.
@@ -158,7 +158,7 @@ const Footer = () => {
                   href="tel:+18001234567" 
                   className="text-gray-600 hover:text-medical-500 transition-colors duration-300"
                 >
-                  1-800-MEDISPHERE
+                  +91-9000000000
                 </a>
               </li>
               <li className="flex items-center group">
@@ -170,7 +170,7 @@ const Footer = () => {
                   href="mailto:info@medisphere.com" 
                   className="text-gray-600 hover:text-medical-500 transition-colors duration-300"
                 >
-                  info@medisphere.com
+                  info@healthsync.com
                 </a>
               </li>
             </ul>
@@ -181,7 +181,7 @@ const Footer = () => {
         <div className="border-t border-gray-200 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm mb-4 md:mb-0">
-              &copy; {new Date().getFullYear()} MediSphere. All rights reserved. | HIPAA Compliant
+              &copy; {new Date().getFullYear()} HealthSync. All rights reserved. | HIPAA Compliant
             </p>
             <div className="flex space-x-6">
               <a 

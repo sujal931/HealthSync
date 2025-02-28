@@ -32,8 +32,8 @@ const Navbar = () => {
             to="/" 
             className="text-2xl font-bold text-medical-800 flex items-center hover:text-medical-600 transition-colors duration-300"
           >
-            <span className="text-medical-500">Medi</span>
-            <span>Sphere</span>
+            <span className="text-medical-500">Health</span>
+            <span>Sync</span>
             <span className="ml-1.5 inline-flex h-2 w-2 rounded-full bg-medical-500 animate-pulse-soft"></span>
           </Link>
           
