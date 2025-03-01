@@ -40,5 +40,3 @@ This project is built with .
 
 
 
-## I want to use a custom domain - is that possible?
-
